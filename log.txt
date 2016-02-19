@@ -1,0 +1,3136 @@
+In file included from socketaddress.h:18:0,
+                 from asyncresolverinterface.h:15,
+                 from nethelpers.h:23,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+ipaddress.h:56:28: error: ‘in_addr’ does not name a type
+   explicit IPAddress(const in_addr& ip4) : family_(AF_INET) {
+                            ^
+ipaddress.h:56:37: error: ISO C++ forbids declaration of ‘ip4’ with no type [-fpermissive]
+   explicit IPAddress(const in_addr& ip4) : family_(AF_INET) {
+                                     ^
+ipaddress.h:61:28: error: ‘in6_addr’ does not name a type
+   explicit IPAddress(const in6_addr& ip6) : family_(AF_INET6) {
+                            ^
+ipaddress.h:61:38: error: ISO C++ forbids declaration of ‘ip6’ with no type [-fpermissive]
+   explicit IPAddress(const in6_addr& ip6) : family_(AF_INET6) {
+                                      ^
+ipaddress.h:61:12: error: ‘rtc::IPAddress::IPAddress(const int&)’ cannot be overloaded
+   explicit IPAddress(const in6_addr& ip6) : family_(AF_INET6) {
+            ^
+ipaddress.h:56:12: error: with ‘rtc::IPAddress::IPAddress(const int&)’
+   explicit IPAddress(const in_addr& ip4) : family_(AF_INET) {
+            ^
+ipaddress.h:89:3: error: ‘in_addr’ does not name a type
+   in_addr ipv4_address() const;
+   ^
+ipaddress.h:90:3: error: ‘in6_addr’ does not name a type
+   in6_addr ipv6_address() const;
+   ^
+ipaddress.h:118:5: error: ‘in_addr’ does not name a type
+     in_addr ip4;
+     ^
+ipaddress.h:119:5: error: ‘in6_addr’ does not name a type
+     in6_addr ip6;
+     ^
+ipaddress.h: In constructor ‘rtc::IPAddress::IPAddress()’:
+ipaddress.h:52:25: error: ‘AF_UNSPEC’ was not declared in this scope
+   IPAddress() : family_(AF_UNSPEC) {
+                         ^
+ipaddress.h: In constructor ‘rtc::IPAddress::IPAddress(const int&)’:
+ipaddress.h:56:52: error: ‘AF_INET’ was not declared in this scope
+   explicit IPAddress(const in_addr& ip4) : family_(AF_INET) {
+                                                    ^
+ipaddress.h:58:8: error: ‘union rtc::IPAddress::<anonymous>’ has no member named ‘ip4’
+     u_.ip4 = ip4;
+        ^
+ipaddress.h: In constructor ‘rtc::IPAddress::IPAddress(const int&)’:
+ipaddress.h:61:53: error: ‘AF_INET6’ was not declared in this scope
+   explicit IPAddress(const in6_addr& ip6) : family_(AF_INET6) {
+                                                     ^
+ipaddress.h:62:8: error: ‘union rtc::IPAddress::<anonymous>’ has no member named ‘ip6’
+     u_.ip6 = ip6;
+        ^
+ipaddress.h: In constructor ‘rtc::IPAddress::IPAddress(uint32_t)’:
+ipaddress.h:65:64: error: ‘AF_INET’ was not declared in this scope
+   explicit IPAddress(uint32_t ip_in_host_byte_order) : family_(AF_INET) {
+                                                                ^
+ipaddress.h:67:8: error: ‘union rtc::IPAddress::<anonymous>’ has no member named ‘ip4’
+     u_.ip4.s_addr = HostToNetwork32(ip_in_host_byte_order);
+        ^
+ipaddress.h: At global scope:
+ipaddress.h:135:26: error: ‘in6_addr’ does not name a type
+   InterfaceAddress(const in6_addr& ip6, int ipv6_flags)
+                          ^
+ipaddress.h:135:36: error: ISO C++ forbids declaration of ‘ip6’ with no type [-fpermissive]
+   InterfaceAddress(const in6_addr& ip6, int ipv6_flags)
+                                    ^
+In file included from nethelpers.h:23:0,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+asyncresolverinterface.h: In member function ‘rtc::SocketAddress rtc::AsyncResolverInterface::address() const’:
+asyncresolverinterface.h:37:24: error: ‘AF_INET’ was not declared in this scope
+     GetResolvedAddress(AF_INET, &addr);
+                        ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+criticalsection.h: At global scope:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+criticalsection.h:75:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(CritScope);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+criticalsection.h:75:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(CritScope);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+criticalsection.h:98:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TryCritScope);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+criticalsection.h:98:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TryCritScope);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+criticalsection.h:124:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(GlobalLockScope);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+criticalsection.h:124:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(GlobalLockScope);
+   ^
+In file included from scoped_ptr.h:93:0,
+                 from messagehandler.h:17,
+                 from messagequeue.h:24,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+template_util.h:60:28: error: template argument 1 is invalid
+ struct remove_reference<T&&> {
+                            ^
+In file included from messagehandler.h:17:0,
+                 from messagequeue.h:24,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+scoped_ptr.h:150:17: error: expected identifier before ‘sizeof’
+   static_assert(sizeof(T) == -1, "do not use array with size as type");
+                 ^
+scoped_ptr.h:150:17: error: expected ‘,’ or ‘...’ before ‘sizeof’
+scoped_ptr.h:150:70: error: ISO C++ forbids declaration of ‘static_assert’ with no type [-fpermissive]
+   static_assert(sizeof(T) == -1, "do not use array with size as type");
+                                                                      ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+scoped_ptr.h:286:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(scoped_ptr_impl);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+scoped_ptr.h:286:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(scoped_ptr_impl);
+   ^
+In file included from messagehandler.h:17:0,
+                 from messagequeue.h:24,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+scoped_ptr.h: In destructor ‘rtc::internal::scoped_ptr_impl<T, D>::~scoped_ptr_impl()’:
+scoped_ptr.h:208:22: error: ‘nullptr’ was not declared in this scope
+     if (data_.ptr != nullptr) {
+                      ^
+In file included from scoped_ptr.h:85:0,
+                 from messagehandler.h:17,
+                 from messagequeue.h:24,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+scoped_ptr.h: In member function ‘void rtc::internal::scoped_ptr_impl<T, D>::reset(T*)’:
+scoped_ptr.h:218:54: error: ‘nullptr’ was not declared in this scope
+     assert(!ShouldAbortOnSelfReset<D>::value || p == nullptr || p != data_.ptr);
+                                                      ^
+In file included from messagehandler.h:17:0,
+                 from messagequeue.h:24,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+scoped_ptr.h: In member function ‘T* rtc::internal::scoped_ptr_impl<T, D>::release()’:
+scoped_ptr.h:257:17: error: ‘nullptr’ was not declared in this scope
+     data_.ptr = nullptr;
+                 ^
+scoped_ptr.h: In member function ‘T** rtc::internal::scoped_ptr_impl<T, D>::accept()’:
+scoped_ptr.h:262:11: error: ‘nullptr’ was not declared in this scope
+     reset(nullptr);
+           ^
+scoped_ptr.h: At global scope:
+scoped_ptr.h:330:28: error: function definition does not declare parameters
+   scoped_ptr(std::nullptr_t) : impl_(nullptr) {}
+                            ^
+scoped_ptr.h:343:30: error: expected ‘,’ or ‘...’ before ‘&&’ token
+   scoped_ptr(scoped_ptr<U, V>&& other)
+                              ^
+scoped_ptr.h:359:41: error: expected ‘,’ or ‘...’ before ‘&&’ token
+   scoped_ptr& operator=(scoped_ptr<U, V>&& rhs) {
+                                         ^
+scoped_ptr.h:367:39: error: declaration of ‘operator=’ as non-function
+   scoped_ptr& operator=(std::nullptr_t) {
+                                       ^
+scoped_ptr.h:367:23: error: expected ‘;’ at end of member declaration
+   scoped_ptr& operator=(std::nullptr_t) {
+                       ^
+scoped_ptr.h:370:3: error: ISO C++ forbids declaration of ‘nullptr_t’ with no type [-fpermissive]
+   }
+   ^
+scoped_ptr.h:370:3: error: invalid use of ‘::’
+scoped_ptr.h:370:3: error: expected ‘;’ at end of member declaration
+scoped_ptr.h:373:41: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   scoped_ptr(const scoped_ptr& other) = delete;
+                                         ^
+scoped_ptr.h:374:52: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   scoped_ptr& operator=(const scoped_ptr& other) = delete;
+                                                    ^
+scoped_ptr.h:377:13: error: expected unqualified-id before ‘&&’ token
+   scoped_ptr&& Pass() { return std::move(*this); }
+             ^
+scoped_ptr.h:381:32: error: ‘nullptr’ was not declared in this scope
+   void reset(element_type* p = nullptr) { impl_.reset(p); }
+                                ^
+scoped_ptr.h: In constructor ‘rtc::scoped_ptr<T, D>::scoped_ptr()’:
+scoped_ptr.h:321:24: error: ‘nullptr’ was not declared in this scope
+   scoped_ptr() : impl_(nullptr) {}
+                        ^
+scoped_ptr.h: In constructor ‘rtc::scoped_ptr<T, D>::scoped_ptr(rtc::scoped_ptr<U, V>)’:
+scoped_ptr.h:344:16: error: ‘other’ was not declared in this scope
+       : impl_(&other.impl_) {
+                ^
+scoped_ptr.h: In member function ‘rtc::scoped_ptr<T, D>& rtc::scoped_ptr<T, D>::operator=(rtc::scoped_ptr<U, V>)’:
+scoped_ptr.h:361:22: error: ‘rhs’ was not declared in this scope
+     impl_.TakeState(&rhs.impl_);
+                      ^
+In file included from scoped_ptr.h:85:0,
+                 from messagehandler.h:17,
+                 from messagequeue.h:24,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+scoped_ptr.h: In member function ‘rtc::scoped_ptr<T, D>::element_type& rtc::scoped_ptr<T, D>::operator*() const’:
+scoped_ptr.h:386:27: error: ‘nullptr’ was not declared in this scope
+     assert(impl_.get() != nullptr);
+                           ^
+scoped_ptr.h: In member function ‘rtc::scoped_ptr<T, D>::element_type* rtc::scoped_ptr<T, D>::operator->() const’:
+scoped_ptr.h:390:27: error: ‘nullptr’ was not declared in this scope
+     assert(impl_.get() != nullptr);
+                           ^
+In file included from messagehandler.h:17:0,
+                 from messagequeue.h:24,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+scoped_ptr.h: In member function ‘rtc::scoped_ptr<T, D>::operator rtc::scoped_ptr<T, D>::Testable() const’:
+scoped_ptr.h:412:47: error: ‘nullptr’ was not declared in this scope
+     return impl_.get() ? &scoped_ptr::impl_ : nullptr;
+                                               ^
+scoped_ptr.h: At global scope:
+scoped_ptr.h:487:28: error: function definition does not declare parameters
+   scoped_ptr(std::nullptr_t) : impl_(nullptr) {}
+                            ^
+scoped_ptr.h:490:24: error: expected ‘,’ or ‘...’ before ‘&&’ token
+   scoped_ptr(scoped_ptr&& other) : impl_(&other.impl_) {}
+                        ^
+scoped_ptr.h:490:32: error: invalid constructor; you probably meant ‘rtc::scoped_ptr<T [], D> (const rtc::scoped_ptr<T [], D>&)’
+   scoped_ptr(scoped_ptr&& other) : impl_(&other.impl_) {}
+                                ^
+scoped_ptr.h:493:35: error: expected ‘,’ or ‘...’ before ‘&&’ token
+   scoped_ptr& operator=(scoped_ptr&& rhs) {
+                                   ^
+scoped_ptr.h:500:39: error: declaration of ‘operator=’ as non-function
+   scoped_ptr& operator=(std::nullptr_t) {
+                                       ^
+scoped_ptr.h:500:23: error: expected ‘;’ at end of member declaration
+   scoped_ptr& operator=(std::nullptr_t) {
+                       ^
+scoped_ptr.h:503:3: error: ISO C++ forbids declaration of ‘nullptr_t’ with no type [-fpermissive]
+   }
+   ^
+scoped_ptr.h:503:3: error: invalid use of ‘::’
+scoped_ptr.h:503:3: error: expected ‘;’ at end of member declaration
+scoped_ptr.h:506:41: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   scoped_ptr(const scoped_ptr& other) = delete;
+                                         ^
+scoped_ptr.h:507:52: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   scoped_ptr& operator=(const scoped_ptr& other) = delete;
+                                                    ^
+scoped_ptr.h:510:13: error: expected unqualified-id before ‘&&’ token
+   scoped_ptr&& Pass() { return std::move(*this); }
+             ^
+scoped_ptr.h:514:36: error: ‘nullptr’ was not declared in this scope
+   void reset(element_type* array = nullptr) { impl_.reset(array); }
+                                    ^
+scoped_ptr.h: In constructor ‘rtc::scoped_ptr<T [], D>::scoped_ptr()’:
+scoped_ptr.h:469:24: error: ‘nullptr’ was not declared in this scope
+   scoped_ptr() : impl_(nullptr) {}
+                        ^
+scoped_ptr.h: In member function ‘rtc::scoped_ptr<T [], D>& rtc::scoped_ptr<T [], D>::operator=(rtc::scoped_ptr<T [], D>)’:
+scoped_ptr.h:494:22: error: ‘rhs’ was not declared in this scope
+     impl_.TakeState(&rhs.impl_);
+                      ^
+In file included from scoped_ptr.h:85:0,
+                 from messagehandler.h:17,
+                 from messagequeue.h:24,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+scoped_ptr.h: In member function ‘rtc::scoped_ptr<T [], D>::element_type& rtc::scoped_ptr<T [], D>::operator[](size_t) const’:
+scoped_ptr.h:518:27: error: ‘nullptr’ was not declared in this scope
+     assert(impl_.get() != nullptr);
+                           ^
+In file included from messagehandler.h:17:0,
+                 from messagequeue.h:24,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+scoped_ptr.h: In member function ‘rtc::scoped_ptr<T [], D>::operator rtc::scoped_ptr<T [], D>::Testable() const’:
+scoped_ptr.h:535:47: error: ‘nullptr’ was not declared in this scope
+     return impl_.get() ? &scoped_ptr::impl_ : nullptr;
+                                               ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+messagehandler.h: At global scope:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+messagehandler.h:34:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(MessageHandler);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+messagehandler.h:34:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(MessageHandler);
+   ^
+In file included from messagequeue.h:24:0,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+messagehandler.h: In member function ‘virtual void rtc::FunctorMessageHandler<rtc::scoped_ptr<T>, FunctorT>::OnMessage(rtc::Message*)’:
+messagehandler.h:59:52: error: ‘move’ is not a member of ‘std’
+   virtual void OnMessage(Message* msg) { result_ = std::move(functor_()); }
+                                                    ^
+messagehandler.h: In member function ‘rtc::scoped_ptr<T> rtc::FunctorMessageHandler<rtc::scoped_ptr<T>, FunctorT>::result()’:
+messagehandler.h:60:46: error: ‘move’ is not a member of ‘std’
+   rtc::scoped_ptr<ReturnT> result() { return std::move(result_); }
+                                              ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+socket.h: At global scope:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+socket.h:193:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(Socket);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+socket.h:193:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(Socket);
+   ^
+In file included from socketfactory.h:15:0,
+                 from socketserver.h:14,
+                 from messagequeue.h:28,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+asyncsocket.h:26:16: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~AsyncSocket() override;
+                ^
+asyncsocket.h:28:43: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   AsyncSocket* Accept(SocketAddress* paddr) override = 0;
+                                           ^
+asyncsocket.h:51:23: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~AsyncSocketAdapter() override;
+                       ^
+asyncsocket.h:53:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   SocketAddress GetLocalAddress() const override;
+                                   ^
+asyncsocket.h:54:36: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   SocketAddress GetRemoteAddress() const override;
+                                    ^
+asyncsocket.h:55:37: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Bind(const SocketAddress& addr) override;
+                                     ^
+asyncsocket.h:56:40: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Connect(const SocketAddress& addr) override;
+                                        ^
+asyncsocket.h:57:37: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Send(const void* pv, size_t cb) override;
+                                     ^
+asyncsocket.h:58:66: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int SendTo(const void* pv, size_t cb, const SocketAddress& addr) override;
+                                                                  ^
+asyncsocket.h:59:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Recv(void* pv, size_t cb) override;
+                               ^
+asyncsocket.h:60:57: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int RecvFrom(void* pv, size_t cb, SocketAddress* paddr) override;
+                                                         ^
+asyncsocket.h:61:25: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Listen(int backlog) override;
+                         ^
+asyncsocket.h:62:43: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   AsyncSocket* Accept(SocketAddress* paddr) override;
+                                           ^
+asyncsocket.h:63:13: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Close() override;
+             ^
+asyncsocket.h:64:18: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int GetError() const override;
+                  ^
+asyncsocket.h:65:26: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void SetError(int error) override;
+                          ^
+asyncsocket.h:66:24: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ConnState GetState() const override;
+                        ^
+asyncsocket.h:67:32: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int EstimateMTU(uint16_t* mtu) override;
+                                ^
+asyncsocket.h:68:39: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int GetOption(Option opt, int* value) override;
+                                       ^
+asyncsocket.h:69:38: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int SetOption(Option opt, int value) override;
+                                      ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+messagequeue.h:257:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(MessageQueue);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+messagequeue.h:257:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(MessageQueue);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+thread.h:71:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(ThreadManager);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+thread.h:71:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(ThreadManager);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+thread.h:90:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(Runnable);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+thread.h:90:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(Runnable);
+   ^
+In file included from signalthread.h:18:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+thread.h:102:11: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~Thread() override;
+           ^
+thread.h:170:41: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+              MessageList* removed = NULL) override;
+                                         ^
+thread.h:171:21: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void ReceiveSends() override;
+                     ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+thread.h:279:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(Thread);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+thread.h:279:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(Thread);
+   ^
+In file included from signalthread.h:18:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+thread.h:289:15: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~AutoThread() override;
+               ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+thread.h:292:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(AutoThread);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+thread.h:292:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(AutoThread);
+   ^
+constructormagic.h:31:16: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName() = delete;                               \
+                ^
+thread.h:324:3: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(SocketServerScope);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+constructormagic.h:32:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TypeName)
+   ^
+thread.h:324:3: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(SocketServerScope);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+constructormagic.h:32:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TypeName)
+   ^
+thread.h:324:3: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(SocketServerScope);
+   ^
+In file included from nethelpers.h:24:0,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+signalthread.h:69:17: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~SignalThread() override;
+                 ^
+signalthread.h:92:30: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void OnMessage(Message* msg) override;
+                              ^
+signalthread.h:106:13: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     ~Worker() override;
+             ^
+signalthread.h:107:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     void Run() override;
+              ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:31:16: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName() = delete;                               \
+                ^
+signalthread.h:112:5: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+     RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(Worker);
+     ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+constructormagic.h:32:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TypeName)
+   ^
+signalthread.h:112:5: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+     RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(Worker);
+     ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+constructormagic.h:32:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TypeName)
+   ^
+signalthread.h:112:5: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+     RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(Worker);
+     ^
+constructormagic.h:31:16: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName() = delete;                               \
+                ^
+signalthread.h:135:5: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+     RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(EnterExit);
+     ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+constructormagic.h:32:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TypeName)
+   ^
+signalthread.h:135:5: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+     RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(EnterExit);
+     ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+constructormagic.h:32:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TypeName)
+   ^
+signalthread.h:135:5: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+     RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(EnterExit);
+     ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+signalthread.h:147:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(SignalThread);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+signalthread.h:147:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(SignalThread);
+   ^
+In file included from peer_connection_client.h:35:0,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+nethelpers.h:37:18: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~AsyncResolver() override;
+                  ^
+nethelpers.h:39:39: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void Start(const SocketAddress& addr) override;
+                                       ^
+nethelpers.h:40:60: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetResolvedAddress(int family, SocketAddress* addr) const override;
+                                                            ^
+nethelpers.h:41:18: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int GetError() const override;
+                  ^
+nethelpers.h:42:25: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void Destroy(bool wait) override;
+                         ^
+nethelpers.h:48:15: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void DoWork() override;
+               ^
+nethelpers.h:49:19: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void OnWorkDone() override;
+                   ^
+In file included from peer_connection_client.h:38:0,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+physicalsocketserver.h:62:25: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~PhysicalSocketServer() override;
+                         ^
+physicalsocketserver.h:65:32: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   Socket* CreateSocket(int type) override;
+                                ^
+physicalsocketserver.h:66:44: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   Socket* CreateSocket(int family, int type) override;
+                                            ^
+physicalsocketserver.h:68:42: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   AsyncSocket* CreateAsyncSocket(int type) override;
+                                          ^
+physicalsocketserver.h:69:54: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   AsyncSocket* CreateAsyncSocket(int family, int type) override;
+                                                      ^
+physicalsocketserver.h:75:37: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool Wait(int cms, bool process_io) override;
+                                     ^
+physicalsocketserver.h:76:15: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void WakeUp() override;
+               ^
+physicalsocketserver.h:122:19: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~PhysicalSocket() override;
+                   ^
+physicalsocketserver.h:127:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   SocketAddress GetLocalAddress() const override;
+                                   ^
+physicalsocketserver.h:128:36: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   SocketAddress GetRemoteAddress() const override;
+                                    ^
+physicalsocketserver.h:130:42: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Bind(const SocketAddress& bind_addr) override;
+                                          ^
+physicalsocketserver.h:131:40: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Connect(const SocketAddress& addr) override;
+                                        ^
+physicalsocketserver.h:133:18: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int GetError() const override;
+                  ^
+physicalsocketserver.h:134:26: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void SetError(int error) override;
+                          ^
+physicalsocketserver.h:136:24: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ConnState GetState() const override;
+                        ^
+physicalsocketserver.h:138:39: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int GetOption(Option opt, int* value) override;
+                                       ^
+physicalsocketserver.h:139:38: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int SetOption(Option opt, int value) override;
+                                      ^
+physicalsocketserver.h:141:37: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Send(const void* pv, size_t cb) override;
+                                     ^
+physicalsocketserver.h:144:39: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+              const SocketAddress& addr) override;
+                                       ^
+physicalsocketserver.h:146:39: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Recv(void* buffer, size_t length) override;
+                                       ^
+physicalsocketserver.h:147:68: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int RecvFrom(void* buffer, size_t length, SocketAddress* out_addr) override;
+                                                                    ^
+physicalsocketserver.h:149:25: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Listen(int backlog) override;
+                         ^
+physicalsocketserver.h:150:46: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   AsyncSocket* Accept(SocketAddress* out_addr) override;
+                                              ^
+physicalsocketserver.h:152:13: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Close() override;
+             ^
+physicalsocketserver.h:154:32: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int EstimateMTU(uint16_t* mtu) override;
+                                ^
+physicalsocketserver.h:189:21: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~SocketDispatcher() override;
+                     ^
+physicalsocketserver.h:194:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool Create(int family, int type) override;
+                                   ^
+physicalsocketserver.h:201:21: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int GetDescriptor() override;
+                     ^
+physicalsocketserver.h:202:27: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool IsDescriptorClosed() override;
+                           ^
+physicalsocketserver.h:205:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   uint32_t GetRequestedEvents() override;
+                               ^
+physicalsocketserver.h:206:30: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void OnPreEvent(uint32_t ff) override;
+                              ^
+physicalsocketserver.h:207:36: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void OnEvent(uint32_t ff, int err) override;
+                                    ^
+physicalsocketserver.h:209:13: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int Close() override;
+             ^
+In file included from mediachannel.h:34:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+codec.h:143:19: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~AudioCodec() = default;
+                   ^
+codec.h:179:19: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~VideoCodec() = default;
+                   ^
+codec.h: In function ‘bool cricket::FindCodecById(const std::vector<_Tp>&, int, Codec*)’:
+codec.h:228:20: error: ISO C++ forbids declaration of ‘codec’ with no type [-fpermissive]
+   for (const auto& codec : codecs) {
+                    ^
+codec.h:228:28: error: range-based ‘for’ loops are not allowed in C++98 mode
+   for (const auto& codec : codecs) {
+                            ^
+codec.h:229:15: error: request for member ‘id’ in ‘codec’, which is of non-class type ‘const int’
+     if (codec.id == payload_type) {
+               ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h: At global scope:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+streamparams.h:247:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(MediaStreams);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+streamparams.h:247:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(MediaStreams);
+   ^
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h: In function ‘const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition)’:
+streamparams.h:280:35: error: ‘nullptr’ was not declared in this scope
+   return found == streams.end() ? nullptr : &(*found);
+                                   ^
+streamparams.h: In function ‘const cricket::StreamParams* cricket::GetStreamBySsrc(const StreamParamsVec&, uint32_t)’:
+streamparams.h:286:67: warning: lambda expressions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+       [&ssrc](const StreamParams& sp) { return sp.has_ssrc(ssrc); });
+                                                                   ^
+streamparams.h:286:68: error: no matching function for call to ‘GetStream(const StreamParamsVec&, cricket::GetStreamBySsrc(const StreamParamsVec&, uint32_t)::__lambda0)’
+       [&ssrc](const StreamParams& sp) { return sp.has_ssrc(ssrc); });
+                                                                    ^
+streamparams.h:286:68: note: candidate is:
+streamparams.h:276:21: note: template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition)
+ const StreamParams* GetStream(const StreamParamsVec& streams,
+                     ^
+streamparams.h:276:21: note:   template argument deduction/substitution failed:
+streamparams.h: In substitution of ‘template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition) [with Condition = cricket::GetStreamBySsrc(const StreamParamsVec&, uint32_t)::__lambda0]’:
+streamparams.h:286:68:   required from here
+streamparams.h:286:68: error: template argument for ‘template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition)’ uses local type ‘cricket::GetStreamBySsrc(const StreamParamsVec&, uint32_t)::__lambda0’
+       [&ssrc](const StreamParams& sp) { return sp.has_ssrc(ssrc); });
+                                                                    ^
+streamparams.h:286:68: error:   trying to instantiate ‘template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition)’
+streamparams.h: In function ‘const cricket::StreamParams* cricket::GetStreamByIds(const StreamParamsVec&, const string&, const string&)’:
+streamparams.h:295:7: warning: lambda expressions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+       });
+       ^
+streamparams.h:295:8: error: no matching function for call to ‘GetStream(const StreamParamsVec&, cricket::GetStreamByIds(const StreamParamsVec&, const string&, const string&)::__lambda1)’
+       });
+        ^
+streamparams.h:295:8: note: candidate is:
+streamparams.h:276:21: note: template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition)
+ const StreamParams* GetStream(const StreamParamsVec& streams,
+                     ^
+streamparams.h:276:21: note:   template argument deduction/substitution failed:
+streamparams.h: In substitution of ‘template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition) [with Condition = cricket::GetStreamByIds(const StreamParamsVec&, const string&, const string&)::__lambda1]’:
+streamparams.h:295:8:   required from here
+streamparams.h:295:8: error: template argument for ‘template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition)’ uses local type ‘cricket::GetStreamByIds(const StreamParamsVec&, const string&, const string&)::__lambda1’
+       });
+        ^
+streamparams.h:295:8: error:   trying to instantiate ‘template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition)’
+streamparams.h: In function ‘const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, const cricket::StreamSelector&)’:
+streamparams.h:301:74: warning: lambda expressions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+       [&selector](const StreamParams& sp) { return selector.Matches(sp); });
+                                                                          ^
+streamparams.h:301:75: error: no matching function for call to ‘GetStream(const StreamParamsVec&, cricket::GetStream(const StreamParamsVec&, const cricket::StreamSelector&)::__lambda2)’
+       [&selector](const StreamParams& sp) { return selector.Matches(sp); });
+                                                                           ^
+streamparams.h:301:75: note: candidates are:
+streamparams.h:276:21: note: template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition)
+ const StreamParams* GetStream(const StreamParamsVec& streams,
+                     ^
+streamparams.h:276:21: note:   template argument deduction/substitution failed:
+streamparams.h: In substitution of ‘template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition) [with Condition = cricket::GetStream(const StreamParamsVec&, const cricket::StreamSelector&)::__lambda2]’:
+streamparams.h:301:75:   required from here
+streamparams.h:301:75: error: template argument for ‘template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition)’ uses local type ‘cricket::GetStream(const StreamParamsVec&, const cricket::StreamSelector&)::__lambda2’
+       [&selector](const StreamParams& sp) { return selector.Matches(sp); });
+                                                                           ^
+streamparams.h:301:75: error:   trying to instantiate ‘template<class Condition> const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, Condition)’
+streamparams.h:298:28: note: const cricket::StreamParams* cricket::GetStream(const StreamParamsVec&, const cricket::StreamSelector&)
+ inline const StreamParams* GetStream(const StreamParamsVec& streams,
+                            ^
+streamparams.h:298:28: note:   no known conversion for argument 2 from ‘cricket::GetStream(const StreamParamsVec&, const cricket::StreamSelector&)::__lambda2’ to ‘const cricket::StreamSelector&’
+streamparams.h: In function ‘bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition)’:
+streamparams.h:306:18: error: ISO C++ forbids declaration of ‘iter’ with no type [-fpermissive]
+   auto iter(std::remove_if(streams->begin(), streams->end(), condition));
+                  ^
+streamparams.h:307:12: error: no match for ‘operator==’ (operand types are ‘int’ and ‘std::vector<cricket::StreamParams>::iterator {aka __gnu_cxx::__normal_iterator<cricket::StreamParams*, std::vector<cricket::StreamParams> >}’)
+   if (iter == streams->end())
+            ^
+streamparams.h:307:12: note: candidates are:
+In file included from messagehandler.h:17:0,
+                 from messagequeue.h:24,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+scoped_ptr.h:604:6: note: template<class T, class D> bool operator==(T*, const rtc::scoped_ptr<T, D>&)
+ bool operator==(T* p1, const rtc::scoped_ptr<T, D>& p2) {
+      ^
+scoped_ptr.h:604:6: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘T*’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:33:0,
+                 from /usr/include/c++/4.8/bits/allocator.h:46,
+                 from /usr/include/c++/4.8/deque:61,
+                 from conductor.h:32,
+                 from main.cc:29:
+/usr/include/c++/4.8/ext/new_allocator.h:139:5: note: template<class _Tp> bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+     operator==(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+     ^
+/usr/include/c++/4.8/ext/new_allocator.h:139:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const __gnu_cxx::new_allocator<_Tp>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/deque:60,
+                 from conductor.h:32,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_iterator.h:811:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:811:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/deque:60,
+                 from conductor.h:32,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_iterator.h:805:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:805:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/queue:64:0,
+                 from messagequeue.h:18,
+                 from thread.h:24,
+                 from signalthread.h:18,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_queue.h:268:5: note: template<class _Tp, class _Seq> bool std::operator==(const std::queue<_Tp, _Seq>&, const std::queue<_Tp, _Seq>&)
+     operator==(const queue<_Tp, _Seq>& __x, const queue<_Tp, _Seq>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_queue.h:268:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::queue<_Tp, _Seq>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from nethelpers.h:21,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_list.h:1602:5: note: template<class _Tp, class _Alloc> bool std::operator==(const std::list<_Tp, _Alloc>&, const std::list<_Tp, _Alloc>&)
+     operator==(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:1602:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::list<_Tp, _Alloc>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from nethelpers.h:21,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_list.h:276:5: note: template<class _Val> bool std::operator==(const std::_List_iterator<_Tp>&, const std::_List_const_iterator<_Val>&)
+     operator==(const _List_iterator<_Val>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:276:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::_List_iterator<_Tp>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from mediastreaminterface.h:38,
+                 from main_wnd.h:35,
+                 from conductor.h:37,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_vector.h:1404:5: note: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_vector.h:1404:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::vector<_Tp, _Alloc>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from conductor.h:35,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/basic_string.h:2519:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2519:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from conductor.h:35,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/basic_string.h:2507:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2507:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const _CharT*’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from conductor.h:35,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/basic_string.h:2493:5: note: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::basic_string<_CharT>&, const std::basic_string<_CharT>&)
+     operator==(const basic_string<_CharT>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2493:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::basic_string<_CharT>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from conductor.h:35,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/basic_string.h:2486:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2486:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/bits/char_traits.h:40:0,
+                 from /usr/include/c++/4.8/string:40,
+                 from conductor.h:35,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/postypes.h:216:5: note: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^
+/usr/include/c++/4.8/bits/postypes.h:216:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::fpos<_StateT>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/set:62:0,
+                 from conductor.h:34,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_multiset.h:739:5: note: template<class _Key, class _Compare, class _Alloc> bool std::operator==(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)
+     operator==(const multiset<_Key, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_multiset.h:739:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::multiset<_Key, _Compare, _Alloc>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/set:61:0,
+                 from conductor.h:34,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_set.h:754:5: note: template<class _Key, class _Compare, class _Alloc> bool std::operator==(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)
+     operator==(const set<_Key, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_set.h:754:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::set<_Key, _Compare, _Alloc>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/map:62:0,
+                 from conductor.h:33,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_multimap.h:864:5: note: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator==(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)
+     operator==(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_multimap.h:864:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::multimap<_Key, _Tp, _Compare, _Alloc>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/map:61:0,
+                 from conductor.h:33,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_map.h:962:5: note: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator==(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)
+     operator==(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_map.h:962:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::map<_Key, _Tp, _Compare, _Alloc>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/map:60:0,
+                 from conductor.h:33,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_tree.h:907:5: note: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator==(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+     operator==(const _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_tree.h:907:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/map:60:0,
+                 from conductor.h:33,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_tree.h:310:5: note: template<class _Val> bool std::operator==(const std::_Rb_tree_iterator<_Tp>&, const std::_Rb_tree_const_iterator<_Val>&)
+     operator==(const _Rb_tree_iterator<_Val>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_tree.h:310:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::_Rb_tree_iterator<_Tp>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/deque:64:0,
+                 from conductor.h:32,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_deque.h:1957:5: note: template<class _Tp, class _Alloc> bool std::operator==(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)
+     operator==(const deque<_Tp, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_deque.h:1957:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::deque<_Tp, _Alloc>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/deque:64:0,
+                 from conductor.h:32,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_deque.h:254:5: note: template<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> bool std::operator==(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)
+     operator==(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_deque.h:254:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::_Deque_iterator<_Tp, _Ref, _Ptr>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/deque:64:0,
+                 from conductor.h:32,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_deque.h:247:5: note: template<class _Tp, class _Ref, class _Ptr> bool std::operator==(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)
+     operator==(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_deque.h:247:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::_Deque_iterator<_Tp, _Ref, _Ptr>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/deque:61:0,
+                 from conductor.h:32,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/allocator.h:133:5: note: template<class _Tp> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_Tp1>&)
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:133:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::allocator<_Tp1>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/deque:61:0,
+                 from conductor.h:32,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/allocator.h:128:5: note: template<class _T1, class _T2> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_T2>&)
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:128:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::allocator<_Tp1>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/deque:60,
+                 from conductor.h:32,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_iterator.h:341:5: note: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator==(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:341:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/deque:60,
+                 from conductor.h:32,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_iterator.h:291:5: note: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:291:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/deque:60,
+                 from conductor.h:32,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/stl_pair.h:214:5: note: template<class _T1, class _T2> bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:214:5: note:   template argument deduction/substitution failed:
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h:307:28: note:   mismatched types ‘const std::pair<_T1, _T2>’ and ‘int’
+   if (iter == streams->end())
+                            ^
+streamparams.h:309:38: error: no matching function for call to ‘std::vector<cricket::StreamParams>::erase(int&, std::vector<cricket::StreamParams>::iterator&)’
+   streams->erase(iter, streams->end());
+                                      ^
+streamparams.h:309:38: note: candidates are:
+In file included from /usr/include/c++/4.8/vector:69:0,
+                 from mediastreaminterface.h:38,
+                 from main_wnd.h:35,
+                 from conductor.h:37,
+                 from main.cc:29:
+/usr/include/c++/4.8/bits/vector.tcc:134:5: note: std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::iterator) [with _Tp = cricket::StreamParams; _Alloc = std::allocator<cricket::StreamParams>; std::vector<_Tp, _Alloc>::iterator = __gnu_cxx::__normal_iterator<cricket::StreamParams*, std::vector<cricket::StreamParams> >; typename std::_Vector_base<_Tp, _Alloc>::pointer = cricket::StreamParams*]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/vector.tcc:134:5: note:   candidate expects 1 argument, 2 provided
+/usr/include/c++/4.8/bits/vector.tcc:146:5: note: std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::iterator, std::vector<_Tp, _Alloc>::iterator) [with _Tp = cricket::StreamParams; _Alloc = std::allocator<cricket::StreamParams>; std::vector<_Tp, _Alloc>::iterator = __gnu_cxx::__normal_iterator<cricket::StreamParams*, std::vector<cricket::StreamParams> >; typename std::_Vector_base<_Tp, _Alloc>::pointer = cricket::StreamParams*]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/vector.tcc:146:5: note:   no known conversion for argument 1 from ‘int’ to ‘std::vector<cricket::StreamParams>::iterator {aka __gnu_cxx::__normal_iterator<cricket::StreamParams*, std::vector<cricket::StreamParams> >}’
+In file included from mediachannel.h:36:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+streamparams.h: In function ‘bool cricket::RemoveStream(cricket::StreamParamsVec*, const cricket::StreamSelector&)’:
+streamparams.h:318:74: warning: lambda expressions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+       [&selector](const StreamParams& sp) { return selector.Matches(sp); });
+                                                                          ^
+streamparams.h:318:75: error: no matching function for call to ‘RemoveStream(cricket::StreamParamsVec*&, cricket::RemoveStream(cricket::StreamParamsVec*, const cricket::StreamSelector&)::__lambda3)’
+       [&selector](const StreamParams& sp) { return selector.Matches(sp); });
+                                                                           ^
+streamparams.h:318:75: note: candidates are:
+streamparams.h:305:6: note: template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition)
+ bool RemoveStream(StreamParamsVec* streams, Condition condition) {
+      ^
+streamparams.h:305:6: note:   template argument deduction/substitution failed:
+streamparams.h: In substitution of ‘template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition) [with Condition = cricket::RemoveStream(cricket::StreamParamsVec*, const cricket::StreamSelector&)::__lambda3]’:
+streamparams.h:318:75:   required from here
+streamparams.h:318:75: error: template argument for ‘template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition)’ uses local type ‘cricket::RemoveStream(cricket::StreamParamsVec*, const cricket::StreamSelector&)::__lambda3’
+       [&selector](const StreamParams& sp) { return selector.Matches(sp); });
+                                                                           ^
+streamparams.h:318:75: error:   trying to instantiate ‘template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition)’
+streamparams.h:315:13: note: bool cricket::RemoveStream(cricket::StreamParamsVec*, const cricket::StreamSelector&)
+ inline bool RemoveStream(StreamParamsVec* streams,
+             ^
+streamparams.h:315:13: note:   no known conversion for argument 2 from ‘cricket::RemoveStream(cricket::StreamParamsVec*, const cricket::StreamSelector&)::__lambda3’ to ‘const cricket::StreamSelector&’
+streamparams.h: In function ‘bool cricket::RemoveStreamBySsrc(cricket::StreamParamsVec*, uint32_t)’:
+streamparams.h:322:67: warning: lambda expressions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+       [&ssrc](const StreamParams& sp) { return sp.has_ssrc(ssrc); });
+                                                                   ^
+streamparams.h:322:68: error: no matching function for call to ‘RemoveStream(cricket::StreamParamsVec*&, cricket::RemoveStreamBySsrc(cricket::StreamParamsVec*, uint32_t)::__lambda4)’
+       [&ssrc](const StreamParams& sp) { return sp.has_ssrc(ssrc); });
+                                                                    ^
+streamparams.h:322:68: note: candidates are:
+streamparams.h:305:6: note: template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition)
+ bool RemoveStream(StreamParamsVec* streams, Condition condition) {
+      ^
+streamparams.h:305:6: note:   template argument deduction/substitution failed:
+streamparams.h: In substitution of ‘template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition) [with Condition = cricket::RemoveStreamBySsrc(cricket::StreamParamsVec*, uint32_t)::__lambda4]’:
+streamparams.h:322:68:   required from here
+streamparams.h:322:68: error: template argument for ‘template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition)’ uses local type ‘cricket::RemoveStreamBySsrc(cricket::StreamParamsVec*, uint32_t)::__lambda4’
+       [&ssrc](const StreamParams& sp) { return sp.has_ssrc(ssrc); });
+                                                                    ^
+streamparams.h:322:68: error:   trying to instantiate ‘template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition)’
+streamparams.h:315:13: note: bool cricket::RemoveStream(cricket::StreamParamsVec*, const cricket::StreamSelector&)
+ inline bool RemoveStream(StreamParamsVec* streams,
+             ^
+streamparams.h:315:13: note:   no known conversion for argument 2 from ‘cricket::RemoveStreamBySsrc(cricket::StreamParamsVec*, uint32_t)::__lambda4’ to ‘const cricket::StreamSelector&’
+streamparams.h: In function ‘bool cricket::RemoveStreamByIds(cricket::StreamParamsVec*, const string&, const string&)’:
+streamparams.h:330:7: warning: lambda expressions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+       });
+       ^
+streamparams.h:330:8: error: no matching function for call to ‘RemoveStream(cricket::StreamParamsVec*&, cricket::RemoveStreamByIds(cricket::StreamParamsVec*, const string&, const string&)::__lambda5)’
+       });
+        ^
+streamparams.h:330:8: note: candidates are:
+streamparams.h:305:6: note: template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition)
+ bool RemoveStream(StreamParamsVec* streams, Condition condition) {
+      ^
+streamparams.h:305:6: note:   template argument deduction/substitution failed:
+streamparams.h: In substitution of ‘template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition) [with Condition = cricket::RemoveStreamByIds(cricket::StreamParamsVec*, const string&, const string&)::__lambda5]’:
+streamparams.h:330:8:   required from here
+streamparams.h:330:8: error: template argument for ‘template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition)’ uses local type ‘cricket::RemoveStreamByIds(cricket::StreamParamsVec*, const string&, const string&)::__lambda5’
+       });
+        ^
+streamparams.h:330:8: error:   trying to instantiate ‘template<class Condition> bool cricket::RemoveStream(cricket::StreamParamsVec*, Condition)’
+streamparams.h:315:13: note: bool cricket::RemoveStream(cricket::StreamParamsVec*, const cricket::StreamSelector&)
+ inline bool RemoveStream(StreamParamsVec* streams,
+             ^
+streamparams.h:315:13: note:   no known conversion for argument 2 from ‘cricket::RemoveStreamByIds(cricket::StreamParamsVec*, const string&, const string&)::__lambda5’ to ‘const cricket::StreamSelector&’
+In file included from mediachannel.h:38:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+buffer.h: At global scope:
+buffer.h:40:9: error: expected nested-name-specifier before ‘t’
+   using t = decltype(F(static_cast<T*>(nullptr)));
+         ^
+buffer.h:40:9: error: using-declaration for non-member at class scope
+buffer.h:40:11: error: expected ‘;’ before ‘=’ token
+   using t = decltype(F(static_cast<T*>(nullptr)));
+           ^
+buffer.h:40:11: error: expected unqualified-id before ‘=’ token
+buffer.h:51:16: error: expected ‘,’ or ‘...’ before ‘&&’ token
+   Buffer(Buffer&& buf);       // Move contents from an existing buffer.
+                ^
+buffer.h:51:22: error: invalid constructor; you probably meant ‘rtc::Buffer (const rtc::Buffer&)’
+   Buffer(Buffer&& buf);       // Move contents from an existing buffer.
+                      ^
+buffer.h:60:36: error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
+   Buffer(const T* data, size_t size)
+                                    ^
+buffer.h:63:53: error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
+   Buffer(const T* data, size_t size, size_t capacity)
+                                                     ^
+buffer.h:70:28: error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
+   Buffer(const T(&array)[N])
+                            ^
+buffer.h:78:19: error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
+   const T* data() const {
+                   ^
+buffer.h:83:11: error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
+   T* data() {
+           ^
+buffer.h:102:27: error: expected ‘,’ or ‘...’ before ‘&&’ token
+   Buffer& operator=(Buffer&& buf) {
+                           ^
+buffer.h:122:42: error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
+   void SetData(const T* data, size_t size) {
+                                          ^
+buffer.h:128:34: error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
+   void SetData(const T(&array)[N]) {
+                                  ^
+buffer.h:135:45: error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
+   void AppendData(const T* data, size_t size) {
+                                             ^
+buffer.h:144:37: error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
+   void AppendData(const T(&array)[N]) {
+                                     ^
+buffer.h:173:9: error: expected unqualified-id before ‘&&’ token
+   Buffer&& Pass() {
+         ^
+buffer.h: In constructor ‘rtc::Buffer::Buffer(const T*, size_t)’:
+buffer.h:61:32: warning: delegating constructors only available with -std=c++11 or -std=gnu++11 [enabled by default]
+       : Buffer(data, size, size) {}
+                                ^
+buffer.h: In constructor ‘rtc::Buffer::Buffer(const T*, size_t, size_t)’:
+buffer.h:64:30: warning: delegating constructors only available with -std=c++11 or -std=gnu++11 [enabled by default]
+       : Buffer(size, capacity) {
+                              ^
+buffer.h: In constructor ‘rtc::Buffer::Buffer(const T (&)[N])’:
+buffer.h:71:24: warning: delegating constructors only available with -std=c++11 or -std=gnu++11 [enabled by default]
+       : Buffer(array, N) {}
+                        ^
+buffer.h: In member function ‘rtc::Buffer& rtc::Buffer::operator=(const rtc::Buffer&)’:
+buffer.h:99:24: error: no matching function for call to ‘rtc::Buffer::data() const’
+       SetData(buf.data(), buf.size());
+                        ^
+buffer.h:99:24: note: candidates are:
+buffer.h:78:12: note: template<class T, typename rtc::internal::ByteType<T>::t <anonymous> > const T* rtc::Buffer::data() const
+   const T* data() const {
+            ^
+buffer.h:78:12: note:   template argument deduction/substitution failed:
+buffer.h:99:24: note:   couldn't deduce template parameter ‘T’
+       SetData(buf.data(), buf.size());
+                        ^
+buffer.h:83:6: note: template<class T, typename rtc::internal::ByteType<T>::t <anonymous> > T* rtc::Buffer::data()
+   T* data() {
+      ^
+buffer.h:83:6: note:   template argument deduction/substitution failed:
+buffer.h:99:24: note:   couldn't deduce template parameter ‘T’
+       SetData(buf.data(), buf.size());
+                        ^
+In file included from /usr/include/c++/4.8/cassert:43:0,
+                 from buffer.h:15,
+                 from mediachannel.h:38,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+buffer.h: In member function ‘rtc::Buffer& rtc::Buffer::operator=(rtc::Buffer)’:
+buffer.h:104:12: error: ‘buf’ was not declared in this scope
+     assert(buf.IsConsistent());
+            ^
+In file included from mediachannel.h:38:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+buffer.h:107:13: error: ‘move’ is not a member of ‘std’
+     data_ = std::move(buf.data_);
+             ^
+buffer.h: In member function ‘bool rtc::Buffer::operator==(const rtc::Buffer&) const’:
+buffer.h:114:64: error: no matching function for call to ‘rtc::Buffer::data() const’
+     return size_ == buf.size() && memcmp(data_.get(), buf.data(), size_) == 0;
+                                                                ^
+buffer.h:114:64: note: candidates are:
+buffer.h:78:12: note: template<class T, typename rtc::internal::ByteType<T>::t <anonymous> > const T* rtc::Buffer::data() const
+   const T* data() const {
+            ^
+buffer.h:78:12: note:   template argument deduction/substitution failed:
+buffer.h:114:64: note:   couldn't deduce template parameter ‘T’
+     return size_ == buf.size() && memcmp(data_.get(), buf.data(), size_) == 0;
+                                                                ^
+buffer.h:83:6: note: template<class T, typename rtc::internal::ByteType<T>::t <anonymous> > T* rtc::Buffer::data()
+   T* data() {
+      ^
+buffer.h:83:6: note:   template argument deduction/substitution failed:
+buffer.h:114:64: note:   couldn't deduce template parameter ‘T’
+     return size_ == buf.size() && memcmp(data_.get(), buf.data(), size_) == 0;
+                                                                ^
+buffer.h: In member function ‘void rtc::Buffer::SetData(const rtc::Buffer&)’:
+buffer.h:131:54: error: no matching function for call to ‘rtc::Buffer::data() const’
+   void SetData(const Buffer& buf) { SetData(buf.data(), buf.size()); }
+                                                      ^
+buffer.h:131:54: note: candidates are:
+buffer.h:78:12: note: template<class T, typename rtc::internal::ByteType<T>::t <anonymous> > const T* rtc::Buffer::data() const
+   const T* data() const {
+            ^
+buffer.h:78:12: note:   template argument deduction/substitution failed:
+buffer.h:131:54: note:   couldn't deduce template parameter ‘T’
+   void SetData(const Buffer& buf) { SetData(buf.data(), buf.size()); }
+                                                      ^
+buffer.h:83:6: note: template<class T, typename rtc::internal::ByteType<T>::t <anonymous> > T* rtc::Buffer::data()
+   T* data() {
+      ^
+buffer.h:83:6: note:   template argument deduction/substitution failed:
+buffer.h:131:54: note:   couldn't deduce template parameter ‘T’
+   void SetData(const Buffer& buf) { SetData(buf.data(), buf.size()); }
+                                                      ^
+buffer.h: In member function ‘void rtc::Buffer::AppendData(const rtc::Buffer&)’:
+buffer.h:147:60: error: no matching function for call to ‘rtc::Buffer::data() const’
+   void AppendData(const Buffer& buf) { AppendData(buf.data(), buf.size()); }
+                                                            ^
+buffer.h:147:60: note: candidates are:
+buffer.h:78:12: note: template<class T, typename rtc::internal::ByteType<T>::t <anonymous> > const T* rtc::Buffer::data() const
+   const T* data() const {
+            ^
+buffer.h:78:12: note:   template argument deduction/substitution failed:
+buffer.h:147:60: note:   couldn't deduce template parameter ‘T’
+   void AppendData(const Buffer& buf) { AppendData(buf.data(), buf.size()); }
+                                                            ^
+buffer.h:83:6: note: template<class T, typename rtc::internal::ByteType<T>::t <anonymous> > T* rtc::Buffer::data()
+   T* data() {
+      ^
+buffer.h:83:6: note:   template argument deduction/substitution failed:
+buffer.h:147:60: note:   couldn't deduce template parameter ‘T’
+   void AppendData(const Buffer& buf) { AppendData(buf.data(), buf.size()); }
+                                                            ^
+buffer.h: In member function ‘void rtc::Buffer::EnsureCapacity(size_t)’:
+buffer.h:167:13: error: ‘move’ is not a member of ‘std’
+     data_ = std::move(new_data);
+             ^
+buffer.h: In member function ‘void rtc::Buffer::Clear()’:
+buffer.h:181:17: error: call to ‘void rtc::scoped_ptr<T [], D>::reset(rtc::scoped_ptr<T [], D>::element_type*) [with T = unsigned char; D = rtc::DefaultDeleter<unsigned char []>; rtc::scoped_ptr<T [], D>::element_type = unsigned char]’ uses the default argument for parameter 1, which is not yet defined
+     data_.reset();
+                 ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+logging.h: At global scope:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+logging.h:234:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(LogMessage);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+logging.h:234:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(LogMessage);
+   ^
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:62:7: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+ class Optional final {
+       ^
+optional.h:69:22: error: expected ‘,’ or ‘...’ before ‘&&’ token
+   explicit Optional(T&& val) : value_(std::move(val)), has_value_(true) {}
+                      ^
+optional.h:73:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   Optional(const Optional&) = default;
+                               ^
+optional.h:74:20: error: expected ‘,’ or ‘...’ before ‘&&’ token
+   Optional(Optional&& m)
+                    ^
+optional.h:74:24: error: invalid constructor; you probably meant ‘rtc::Optional<T> (const rtc::Optional<T>&)’
+   Optional(Optional&& m)
+                        ^
+optional.h:79:42: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   Optional& operator=(const Optional&) = default;
+                                          ^
+optional.h:80:31: error: expected ‘,’ or ‘...’ before ‘&&’ token
+   Optional& operator=(Optional&& m) {
+                               ^
+optional.h:93:28: warning: explicit conversion operators only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   explicit operator bool() const { return has_value_; }
+                            ^
+optional.h: In constructor ‘rtc::Optional<T>::Optional(T)’:
+optional.h:69:39: error: ‘move’ is not a member of ‘std’
+   explicit Optional(T&& val) : value_(std::move(val)), has_value_(true) {}
+                                       ^
+optional.h:69:49: error: ‘val’ was not declared in this scope
+   explicit Optional(T&& val) : value_(std::move(val)), has_value_(true) {}
+                                                 ^
+optional.h: In member function ‘rtc::Optional<T>& rtc::Optional<T>::operator=(rtc::Optional<T>)’:
+optional.h:81:14: error: ‘move’ is not a member of ‘std’
+     value_ = std::move(m.value_);
+              ^
+optional.h:81:24: error: ‘m’ was not declared in this scope
+     value_ = std::move(m.value_);
+                        ^
+In file included from candidate.h:25:0,
+                 from port.h:19,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+network.h: At global scope:
+network.h:60:44: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   virtual ~DefaultLocalAddressProvider() = default;
+                                            ^
+network.h:83:19: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~NetworkManager() override;
+                   ^
+network.h:117:62: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetDefaultLocalAddress(int family, IPAddress* ipaddr) const override;
+                                                              ^
+network.h:83:3: error: looser throw specifier for ‘virtual rtc::NetworkManager::~NetworkManager()’
+   ~NetworkManager() override;
+   ^
+network.h:60:11: error:   overriding ‘virtual rtc::DefaultLocalAddressProvider::~DefaultLocalAddressProvider() throw ()’
+   virtual ~DefaultLocalAddressProvider() = default;
+           ^
+network.h:133:23: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~NetworkManagerBase() override;
+                       ^
+network.h:135:53: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void GetNetworks(std::vector<Network*>* networks) const override;
+                                                     ^
+network.h:136:51: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void GetAnyAddressNetworks(NetworkList* networks) override;
+                                                   ^
+network.h:143:50: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   EnumerationPermission enumeration_permission() const override;
+                                                  ^
+network.h:145:62: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetDefaultLocalAddress(int family, IPAddress* ipaddr) const override;
+                                                              ^
+network.h:193:24: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~BasicNetworkManager() override;
+                        ^
+network.h:195:22: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void StartUpdating() override;
+                      ^
+network.h:196:21: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void StopUpdating() override;
+                     ^
+network.h:198:21: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void DumpNetworks() override;
+                     ^
+network.h:201:30: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void OnMessage(Message* msg) override;
+                              ^
+network.h:359:72: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   const DefaultLocalAddressProvider* default_local_address_provider_ = nullptr;
+                                                                        ^
+network.h:370:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool active_ = true;
+                  ^
+network.h:359:72: error: ‘nullptr’ was not declared in this scope
+   const DefaultLocalAddressProvider* default_local_address_provider_ = nullptr;
+                                                                        ^
+In file included from proxyinfo.h:16:0,
+                 from packetsocketfactory.h:14,
+                 from port.h:20,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+cryptstring.h:36:25: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~EmptyCryptStringImpl() override {}
+                         ^
+cryptstring.h:37:22: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   size_t GetLength() const override;
+                      ^
+cryptstring.h:38:47: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void CopyTo(char* dest, bool nullterminate) const override;
+                                               ^
+cryptstring.h:39:27: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   std::string UrlEncode() const override;
+                           ^
+cryptstring.h:40:27: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   CryptStringImpl* Copy() const override;
+                           ^
+cryptstring.h:41:52: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void CopyRawTo(std::vector<unsigned char>* dest) const override;
+                                                    ^
+cryptstring.h:156:28: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~InsecureCryptStringImpl() override = default;
+                            ^
+cryptstring.h:156:41: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~InsecureCryptStringImpl() override = default;
+                                         ^
+cryptstring.h:157:22: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   size_t GetLength() const override;
+                      ^
+cryptstring.h:158:47: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void CopyTo(char* dest, bool nullterminate) const override;
+                                               ^
+cryptstring.h:159:27: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   std::string UrlEncode() const override;
+                           ^
+cryptstring.h:160:27: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   CryptStringImpl* Copy() const override;
+                           ^
+cryptstring.h:161:52: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void CopyRawTo(std::vector<unsigned char>* dest) const override;
+                                                    ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+packetsocketfactory.h:53:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(PacketSocketFactory);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+packetsocketfactory.h:53:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(PacketSocketFactory);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+sslidentity.h:112:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(SSLCertChain);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+sslidentity.h:112:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(SSLCertChain);
+   ^
+In file included from transport.h:33:0,
+                 from portinterface.h:16,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+sessiondescription.h:171:26: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool msid_supported_ = true;
+                          ^
+In file included from transport.h:36:0,
+                 from portinterface.h:16,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+rtccertificate.h:45:19: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~RTCCertificate() override;
+                   ^
+In file included from sslstreamadapter.h:17:0,
+                 from transport.h:38,
+                 from portinterface.h:16,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+stream.h:66:20: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~StreamInterface() override;
+                    ^
+stream.h:228:30: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void OnMessage(Message* msg) override;
+                              ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+stream.h:231:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(StreamInterface);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+stream.h:231:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(StreamInterface);
+   ^
+In file included from sslstreamadapter.h:17:0,
+                 from transport.h:38,
+                 from portinterface.h:16,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+stream.h:248:26: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   StreamState GetState() const override;
+                          ^
+stream.h:252:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                     int* error) override;
+                               ^
+stream.h:256:32: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                      int* error) override;
+                                ^
+stream.h:257:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void Close() override;
+              ^
+stream.h:286:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool SetPosition(size_t position) override;
+                                   ^
+stream.h:287:38: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetPosition(size_t* position) const override;
+                                      ^
+stream.h:288:30: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetSize(size_t* size) const override;
+                              ^
+stream.h:289:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetAvailable(size_t* size) const override;
+                                   ^
+stream.h:290:40: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetWriteRemaining(size_t* size) const override;
+                                        ^
+stream.h:291:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool ReserveSize(size_t size) override;
+                               ^
+stream.h:292:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool Flush() override;
+              ^
+stream.h:298:27: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~StreamAdapterInterface() override;
+                           ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+stream.h:308:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(StreamAdapterInterface);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+stream.h:308:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(StreamAdapterInterface);
+   ^
+In file included from sslstreamadapter.h:17:0,
+                 from transport.h:38,
+                 from portinterface.h:16,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+stream.h:320:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~StreamTap() override;
+              ^
+stream.h:330:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                     int* error) override;
+                               ^
+stream.h:334:32: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                      int* error) override;
+                                ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+stream.h:340:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(StreamTap);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+stream.h:340:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(StreamTap);
+   ^
+In file included from sslstreamadapter.h:17:0,
+                 from transport.h:38,
+                 from portinterface.h:16,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+stream.h:350:15: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~NullStream() override;
+               ^
+stream.h:353:26: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   StreamState GetState() const override;
+                          ^
+stream.h:357:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                     int* error) override;
+                               ^
+stream.h:361:32: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                      int* error) override;
+                                ^
+stream.h:362:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void Close() override;
+              ^
+stream.h:373:15: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~FileStream() override;
+               ^
+stream.h:384:26: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   StreamState GetState() const override;
+                          ^
+stream.h:388:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                     int* error) override;
+                               ^
+stream.h:392:32: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                      int* error) override;
+                                ^
+stream.h:393:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void Close() override;
+              ^
+stream.h:394:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool SetPosition(size_t position) override;
+                                   ^
+stream.h:395:38: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetPosition(size_t* position) const override;
+                                      ^
+stream.h:396:30: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetSize(size_t* size) const override;
+                              ^
+stream.h:397:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetAvailable(size_t* size) const override;
+                                   ^
+stream.h:398:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool ReserveSize(size_t size) override;
+                               ^
+stream.h:400:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool Flush() override;
+              ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+stream.h:418:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(FileStream);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+stream.h:418:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(FileStream);
+   ^
+In file included from sslstreamadapter.h:17:0,
+                 from transport.h:38,
+                 from portinterface.h:16,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+stream.h:430:26: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   StreamState GetState() const override;
+                          ^
+stream.h:434:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                     int* error) override;
+                               ^
+stream.h:438:32: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                      int* error) override;
+                                ^
+stream.h:439:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void Close() override;
+              ^
+stream.h:440:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool SetPosition(size_t position) override;
+                                   ^
+stream.h:441:38: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetPosition(size_t* position) const override;
+                                      ^
+stream.h:442:30: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetSize(size_t* size) const override;
+                              ^
+stream.h:443:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetAvailable(size_t* size) const override;
+                                   ^
+stream.h:444:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool ReserveSize(size_t size) override;
+                               ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+stream.h:461:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(MemoryStreamBase);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+stream.h:461:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(MemoryStreamBase);
+   ^
+In file included from sslstreamadapter.h:17:0,
+                 from transport.h:38,
+                 from portinterface.h:16,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+stream.h:471:17: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~MemoryStream() override;
+                 ^
+stream.h:476:49: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   StreamResult DoReserve(size_t size, int* error) override;
+                                                 ^
+stream.h:489:25: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~ExternalMemoryStream() override;
+                         ^
+stream.h:504:15: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~FifoBuffer() override;
+               ^
+stream.h:525:26: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   StreamState GetState() const override;
+                          ^
+stream.h:529:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                     int* error) override;
+                               ^
+stream.h:533:32: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                      int* error) override;
+                                ^
+stream.h:534:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void Close() override;
+              ^
+stream.h:535:43: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   const void* GetReadData(size_t* data_len) override;
+                                           ^
+stream.h:536:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void ConsumeReadData(size_t used) override;
+                                   ^
+stream.h:537:39: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void* GetWriteBuffer(size_t* buf_len) override;
+                                       ^
+stream.h:538:38: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void ConsumeWriteBuffer(size_t used) override;
+                                      ^
+stream.h:539:40: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetWriteRemaining(size_t* size) const override;
+                                        ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+stream.h:559:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(FifoBuffer);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+stream.h:559:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(FifoBuffer);
+   ^
+In file included from sslstreamadapter.h:17:0,
+                 from transport.h:38,
+                 from portinterface.h:16,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+stream.h:574:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                     int* error) override;
+                               ^
+stream.h:578:32: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                      int* error) override;
+                                ^
+stream.h:579:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void Close() override;
+              ^
+stream.h:582:60: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void OnEvent(StreamInterface* stream, int events, int err) override;
+                                                            ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+stream.h:590:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(LoggingAdapter);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+stream.h:590:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(LoggingAdapter);
+   ^
+In file included from sslstreamadapter.h:17:0,
+                 from transport.h:38,
+                 from portinterface.h:16,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+stream.h:602:26: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   StreamState GetState() const override;
+                          ^
+stream.h:606:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                     int* error) override;
+                               ^
+stream.h:610:32: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+                      int* error) override;
+                                ^
+stream.h:611:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void Close() override;
+              ^
+stream.h:612:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool SetPosition(size_t position) override;
+                                   ^
+stream.h:613:38: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetPosition(size_t* position) const override;
+                                      ^
+stream.h:614:30: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetSize(size_t* size) const override;
+                              ^
+stream.h:615:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool GetAvailable(size_t* size) const override;
+                                   ^
+stream.h:616:31: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool ReserveSize(size_t size) override;
+                               ^
+stream.h:646:20: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~StreamReference() override;
+                    ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+stream.h:673:5: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+     RTC_DISALLOW_COPY_AND_ASSIGN(StreamRefCount);
+     ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+stream.h:673:5: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+     RTC_DISALLOW_COPY_AND_ASSIGN(StreamRefCount);
+     ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+stream.h:681:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(StreamReference);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+stream.h:681:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(StreamReference);
+   ^
+In file included from portinterface.h:16:0,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+transport.h:124:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int component = 0;
+                   ^
+transport.h:126:32: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int srtp_crypto_suite = rtc::SRTP_INVALID_CRYPTO_SUITE;
+                                ^
+transport.h:127:31: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int ssl_cipher_suite = rtc::TLS_NULL_WITH_NULL_NULL;
+                               ^
+transport.h:144:31: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int receiving_timeout_ms = -1;
+                               ^
+transport.h:147:42: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int backup_connection_ping_interval = -1;
+                                          ^
+transport.h:149:29: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool gather_continually = false;
+                             ^
+transport.h:307:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool channels_destroyed_ = false;
+                              ^
+transport.h:308:29: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool connect_requested_ = false;
+                             ^
+transport.h:309:23: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   IceRole ice_role_ = ICEROLE_UNKNOWN;
+                       ^
+transport.h:310:26: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   uint64_t tiebreaker_ = 0;
+                          ^
+transport.h:311:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   IceMode remote_ice_mode_ = ICEMODE_FULL;
+                              ^
+transport.h:315:33: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool local_description_set_ = false;
+                                 ^
+transport.h:316:34: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool remote_description_set_ = false;
+                                  ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+transport.h:320:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(Transport);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+transport.h:320:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(Transport);
+   ^
+In file included from portinterface.h:17:0,
+                 from port.h:21,
+                 from audiomonitor.h:32,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+asyncpacketsocket.h:78:22: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~AsyncPacketSocket() override;
+                      ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+asyncpacketsocket.h:137:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(AsyncPacketSocket);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+asyncpacketsocket.h:137:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(AsyncPacketSocket);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+bytebuffer.h:117:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(ByteBuffer);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+bytebuffer.h:117:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(ByteBuffer);
+   ^
+In file included from audiomonitor.h:32:0,
+                 from mediachannel.h:46,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+port.h:649:45: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+            const rtc::PacketOptions& options) override;
+                                             ^
+port.h:650:16: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int GetError() override { return error_; }
+                ^
+port.h:653:16: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int error_ = 0;
+                ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h: In constructor ‘cricket::VideoOptions::VideoOptions()’:
+mediachannel.h:245:77: error: call of overloaded ‘Optional(const float&)’ is ambiguous
+         unsignalled_recv_stream_limit(kNumDefaultUnsignalledVideoRecvStreams) {}
+                                                                             ^
+mediachannel.h:245:77: note: candidates are:
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:73:3: note: rtc::Optional<T>::Optional(const rtc::Optional<T>&) [with T = float]
+   Optional(const Optional&) = default;
+   ^
+optional.h:69:12: note: rtc::Optional<T>::Optional(T) [with T = float]
+   explicit Optional(T&& val) : value_(std::move(val)), has_value_(true) {}
+            ^
+optional.h:68:12: note: rtc::Optional<T>::Optional(const T&) [with T = float]
+   explicit Optional(const T& val) : value_(val), has_value_(true) {}
+            ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h:245:77: error: call of overloaded ‘Optional(const float&)’ is ambiguous
+         unsignalled_recv_stream_limit(kNumDefaultUnsignalledVideoRecvStreams) {}
+                                                                             ^
+mediachannel.h:245:77: note: candidates are:
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:73:3: note: rtc::Optional<T>::Optional(const rtc::Optional<T>&) [with T = float]
+   Optional(const Optional&) = default;
+   ^
+optional.h:69:12: note: rtc::Optional<T>::Optional(T) [with T = float]
+   explicit Optional(T&& val) : value_(std::move(val)), has_value_(true) {}
+            ^
+optional.h:68:12: note: rtc::Optional<T>::Optional(const T&) [with T = float]
+   explicit Optional(const T& val) : value_(val), has_value_(true) {}
+            ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h:245:77: error: call of overloaded ‘Optional(const float&)’ is ambiguous
+         unsignalled_recv_stream_limit(kNumDefaultUnsignalledVideoRecvStreams) {}
+                                                                             ^
+mediachannel.h:245:77: note: candidates are:
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:73:3: note: rtc::Optional<T>::Optional(const rtc::Optional<T>&) [with T = float]
+   Optional(const Optional&) = default;
+   ^
+optional.h:69:12: note: rtc::Optional<T>::Optional(T) [with T = float]
+   explicit Optional(T&& val) : value_(std::move(val)), has_value_(true) {}
+            ^
+optional.h:68:12: note: rtc::Optional<T>::Optional(const T&) [with T = float]
+   explicit Optional(const T& val) : value_(val), has_value_(true) {}
+            ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h:245:77: error: call of overloaded ‘Optional(const int&)’ is ambiguous
+         unsignalled_recv_stream_limit(kNumDefaultUnsignalledVideoRecvStreams) {}
+                                                                             ^
+mediachannel.h:245:77: note: candidates are:
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:73:3: note: rtc::Optional<T>::Optional(const rtc::Optional<T>&) [with T = int]
+   Optional(const Optional&) = default;
+   ^
+optional.h:69:12: note: rtc::Optional<T>::Optional(T) [with T = int]
+   explicit Optional(T&& val) : value_(std::move(val)), has_value_(true) {}
+            ^
+optional.h:68:12: note: rtc::Optional<T>::Optional(const T&) [with T = int]
+   explicit Optional(const T& val) : value_(val), has_value_(true) {}
+            ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h: At global scope:
+mediachannel.h:937:23: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool reduced_size = false;
+                       ^
+mediachannel.h:959:26: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   std::string ToString() const override {
+                          ^
+mediachannel.h:970:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int max_bandwidth_bps = -1;
+                            ^
+In file included from videoframe.h:33:0,
+                 from main_wnd.h:40,
+                 from conductor.h:37,
+                 from main.cc:29:
+video_frame_buffer.h:70:15: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int width() const override;
+               ^
+video_frame_buffer.h:71:16: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int height() const override;
+                ^
+video_frame_buffer.h:72:39: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   const uint8_t* data(PlaneType type) const override;
+                                       ^
+video_frame_buffer.h:75:38: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   uint8_t* MutableData(PlaneType type) override;
+                                      ^
+video_frame_buffer.h:76:30: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int stride(PlaneType type) const override;
+                              ^
+video_frame_buffer.h:77:25: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void* native_handle() const override;
+                         ^
+video_frame_buffer.h:78:59: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   rtc::scoped_refptr<VideoFrameBuffer> NativeToI420Buffer() override;
+                                                           ^
+video_frame_buffer.h:81:15: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~I420Buffer() override;
+               ^
+video_frame_buffer.h:100:15: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int width() const override;
+               ^
+video_frame_buffer.h:101:16: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int height() const override;
+                ^
+video_frame_buffer.h:102:39: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   const uint8_t* data(PlaneType type) const override;
+                                       ^
+video_frame_buffer.h:103:30: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int stride(PlaneType type) const override;
+                              ^
+video_frame_buffer.h:104:25: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void* native_handle() const override;
+                         ^
+video_frame_buffer.h:123:15: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int width() const override;
+               ^
+video_frame_buffer.h:124:16: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int height() const override;
+                ^
+video_frame_buffer.h:126:39: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   const uint8_t* data(PlaneType type) const override;
+                                       ^
+video_frame_buffer.h:128:30: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int stride(PlaneType type) const override;
+                              ^
+video_frame_buffer.h:129:25: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void* native_handle() const override;
+                         ^
+video_frame_buffer.h:131:59: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   rtc::scoped_refptr<VideoFrameBuffer> NativeToI420Buffer() override;
+                                                           ^
+video_frame_buffer.h:135:22: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~WrappedI420Buffer() override;
+                      ^
+In file included from peerconnectioninterface.h:75:0,
+                 from conductor.h:40,
+                 from main.cc:29:
+datachannelinterface.h: In constructor ‘webrtc::DataBuffer::DataBuffer(const string&)’:
+datachannelinterface.h:76:24: error: invalid conversion from ‘const char*’ to ‘size_t {aka long unsigned int}’ [-fpermissive]
+       : data(text.data(), text.length()),
+                        ^
+In file included from mediachannel.h:38:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+buffer.h:55:3: error:   initializing argument 1 of ‘rtc::Buffer::Buffer(size_t, size_t)’ [-fpermissive]
+   Buffer(size_t size, size_t capacity);
+   ^
+In file included from peerconnectioninterface.h:76:0,
+                 from conductor.h:40,
+                 from main.cc:29:
+dtlsidentitystore.h: At global scope:
+dtlsidentitystore.h:105:26: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   ~DtlsIdentityStoreImpl() override;
+                          ^
+dtlsidentitystore.h:110:70: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+       const rtc::scoped_refptr<DtlsIdentityRequestObserver>& observer) override;
+                                                                      ^
+dtlsidentitystore.h:113:35: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void OnMessage(rtc::Message* msg) override;
+                                   ^
+dtlsidentitystore.h:153:62: error: ‘>>’ should be ‘> >’ within a nested template argument list
+     std::queue<rtc::scoped_refptr<DtlsIdentityRequestObserver>>
+                                                              ^
+dtlsidentitystore.h: In constructor ‘webrtc::DtlsIdentityStoreImpl::IdentityResult::IdentityResult(rtc::KeyType, rtc::scoped_ptr<rtc::SSLIdentity>)’:
+dtlsidentitystore.h:133:42: error: ‘move’ is not a member of ‘std’
+         : key_type_(key_type), identity_(std::move(identity)) {}
+                                          ^
+In file included from rtpreceiverinterface.h:36:0,
+                 from peerconnectioninterface.h:81,
+                 from conductor.h:40,
+                 from main.cc:29:
+rtpreceiverinterface.h: At global scope:
+proxy.h:337:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method() const override {                          \
+              ^
+rtpreceiverinterface.h:59:1: note: in expansion of macro ‘PROXY_CONSTMETHOD0’
+ PROXY_CONSTMETHOD0(rtc::scoped_refptr<MediaStreamTrackInterface>, track)
+ ^
+proxy.h:337:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method() const override {                          \
+              ^
+rtpreceiverinterface.h:60:1: note: in expansion of macro ‘PROXY_CONSTMETHOD0’
+ PROXY_CONSTMETHOD0(std::string, id)
+ ^
+proxy.h:331:12: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method() override {                           \
+            ^
+rtpreceiverinterface.h:61:1: note: in expansion of macro ‘PROXY_METHOD0’
+ PROXY_METHOD0(void, Stop)
+ ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+videoadapter.h:96:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(VideoAdapter);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+videoadapter.h:96:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(VideoAdapter);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+videoadapter.h:205:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(CoordinatedVideoAdapter);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+videoadapter.h:205:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(CoordinatedVideoAdapter);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+rollingaccumulator.h:168:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(RollingAccumulator);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+rollingaccumulator.h:168:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(RollingAccumulator);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+videocapturer.h:99:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(CapturedFrame);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+videocapturer.h:99:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(CapturedFrame);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+videocapturer.h:380:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(VideoCapturer);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+videocapturer.h:380:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(VideoCapturer);
+   ^
+In file included from mediaengine.h:44:0,
+                 from mediasession.h:41,
+                 from rtpsenderinterface.h:38,
+                 from peerconnectioninterface.h:82,
+                 from conductor.h:40,
+                 from main.cc:29:
+audio_state.h:34:33: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     VoiceEngine* voice_engine = nullptr;
+                                 ^
+audio_state.h:37:46: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     AudioDeviceModule* audio_device_module = nullptr;
+                                              ^
+audio_state.h:34:33: error: ‘nullptr’ was not declared in this scope
+     VoiceEngine* voice_engine = nullptr;
+                                 ^
+audio_state.h:37:46: error: ‘nullptr’ was not declared in this scope
+     AudioDeviceModule* audio_device_module = nullptr;
+                                              ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:31:16: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName() = delete;                               \
+                ^
+fileutils.h:410:3: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(Filesystem);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+constructormagic.h:32:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TypeName)
+   ^
+fileutils.h:410:3: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(Filesystem);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+constructormagic.h:32:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TypeName)
+   ^
+fileutils.h:410:3: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(Filesystem);
+   ^
+constructormagic.h:31:16: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName() = delete;                               \
+                ^
+fileutils.h:423:3: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(FilesystemScope);
+   ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+constructormagic.h:32:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TypeName)
+   ^
+fileutils.h:423:3: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(FilesystemScope);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+constructormagic.h:32:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(TypeName)
+   ^
+fileutils.h:423:3: note: in expansion of macro ‘RTC_DISALLOW_IMPLICIT_CONSTRUCTORS’
+   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(FilesystemScope);
+   ^
+In file included from rtpsenderinterface.h:38:0,
+                 from peerconnectioninterface.h:82,
+                 from conductor.h:40,
+                 from main.cc:29:
+mediasession.h:296:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool rtcp_mux_ = false;
+                    ^
+mediasession.h:297:29: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool rtcp_reduced_size_ = false;
+                             ^
+mediasession.h:298:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int bandwidth_ = kAutoBandwidth;
+                    ^
+mediasession.h:301:33: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   CryptoType crypto_required_ = CT_NONE;
+                                 ^
+mediasession.h:303:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool rtp_header_extensions_set_ = false;
+                                     ^
+mediasession.h:304:23: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool multistream_ = false;
+                       ^
+mediasession.h:306:27: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool conference_mode_ = false;
+                           ^
+mediasession.h:307:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   bool partial_ = false;
+                   ^
+mediasession.h:308:32: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int buffered_mode_latency_ = kBufferedModeDisabled;
+                                ^
+mediasession.h:309:38: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   MediaContentDirection direction_ = MD_SENDRECV;
+                                      ^
+In file included from rtpreceiverinterface.h:36:0,
+                 from peerconnectioninterface.h:81,
+                 from conductor.h:40,
+                 from main.cc:29:
+proxy.h:343:17: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method(t1 a1) override {                              \
+                 ^
+rtpsenderinterface.h:77:1: note: in expansion of macro ‘PROXY_METHOD1’
+ PROXY_METHOD1(bool, SetTrack, MediaStreamTrackInterface*)
+ ^
+proxy.h:337:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method() const override {                          \
+              ^
+rtpsenderinterface.h:78:1: note: in expansion of macro ‘PROXY_CONSTMETHOD0’
+ PROXY_CONSTMETHOD0(rtc::scoped_refptr<MediaStreamTrackInterface>, track)
+ ^
+proxy.h:343:17: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method(t1 a1) override {                              \
+                 ^
+rtpsenderinterface.h:79:1: note: in expansion of macro ‘PROXY_METHOD1’
+ PROXY_METHOD1(void, SetSsrc, uint32_t)
+ ^
+proxy.h:337:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method() const override {                          \
+              ^
+rtpsenderinterface.h:80:1: note: in expansion of macro ‘PROXY_CONSTMETHOD0’
+ PROXY_CONSTMETHOD0(uint32_t, ssrc)
+ ^
+proxy.h:337:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method() const override {                          \
+              ^
+rtpsenderinterface.h:81:1: note: in expansion of macro ‘PROXY_CONSTMETHOD0’
+ PROXY_CONSTMETHOD0(cricket::MediaType, media_type)
+ ^
+proxy.h:337:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method() const override {                          \
+              ^
+rtpsenderinterface.h:82:1: note: in expansion of macro ‘PROXY_CONSTMETHOD0’
+ PROXY_CONSTMETHOD0(std::string, id)
+ ^
+proxy.h:343:17: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method(t1 a1) override {                              \
+                 ^
+rtpsenderinterface.h:83:1: note: in expansion of macro ‘PROXY_METHOD1’
+ PROXY_METHOD1(void, set_stream_id, const std::string&)
+ ^
+proxy.h:337:14: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method() const override {                          \
+              ^
+rtpsenderinterface.h:84:1: note: in expansion of macro ‘PROXY_CONSTMETHOD0’
+ PROXY_CONSTMETHOD0(std::string, stream_id)
+ ^
+proxy.h:331:12: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   r method() override {                           \
+            ^
+rtpsenderinterface.h:85:1: note: in expansion of macro ‘PROXY_METHOD0’
+ PROXY_METHOD0(void, Stop)
+ ^
+In file included from peerconnectioninterface.h:83:0,
+                 from conductor.h:40,
+                 from main.cc:29:
+statstypes.h:228:13: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     ~IdBase() override;
+             ^
+In file included from signalthread.h:16:0,
+                 from nethelpers.h:24,
+                 from peer_connection_client.h:35,
+                 from main_wnd.h:37,
+                 from conductor.h:37,
+                 from main.cc:29:
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+statstypes.h:325:5: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+     RTC_DISALLOW_COPY_AND_ASSIGN(Value);
+     ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+statstypes.h:325:5: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+     RTC_DISALLOW_COPY_AND_ASSIGN(Value);
+     ^
+constructormagic.h:21:31: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   TypeName(const TypeName&) = delete;          \
+                               ^
+statstypes.h:375:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(StatsReport);
+   ^
+constructormagic.h:16:37: warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   void operator=(const TypeName&) = delete
+                                     ^
+constructormagic.h:22:3: note: in expansion of macro ‘RTC_DISALLOW_ASSIGN’
+   RTC_DISALLOW_ASSIGN(TypeName)
+   ^
+statstypes.h:375:3: note: in expansion of macro ‘RTC_DISALLOW_COPY_AND_ASSIGN’
+   RTC_DISALLOW_COPY_AND_ASSIGN(StatsReport);
+   ^
+In file included from conductor.h:40:0,
+                 from main.cc:29:
+peerconnectioninterface.h:260:55: error: ‘>>’ should be ‘> >’ within a nested template argument list
+     std::vector<rtc::scoped_refptr<rtc::RTCCertificate>> certificates;
+                                                       ^
+peerconnectioninterface.h:349:60: error: ‘>>’ should be ‘> >’ within a nested template argument list
+   virtual std::vector<rtc::scoped_refptr<RtpSenderInterface>> GetSenders()
+                                                            ^
+peerconnectioninterface.h:354:62: error: ‘>>’ should be ‘> >’ within a nested template argument list
+   virtual std::vector<rtc::scoped_refptr<RtpReceiverInterface>> GetReceivers()
+                                                              ^
+peerconnectioninterface.h: In member function ‘virtual std::vector<rtc::scoped_refptr<webrtc::RtpSenderInterface> > webrtc::PeerConnectionInterface::GetSenders() const’:
+peerconnectioninterface.h:351:61: error: ‘>>’ should be ‘> >’ within a nested template argument list
+     return std::vector<rtc::scoped_refptr<RtpSenderInterface>>();
+                                                             ^
+peerconnectioninterface.h: In member function ‘virtual std::vector<rtc::scoped_refptr<webrtc::RtpReceiverInterface> > webrtc::PeerConnectionInterface::GetReceivers() const’:
+peerconnectioninterface.h:356:63: error: ‘>>’ should be ‘> >’ within a nested template argument list
+     return std::vector<rtc::scoped_refptr<RtpReceiverInterface>>();
+                                                               ^
+In file included from conductor.h:42:0,
+                 from main.cc:29:
+fakedtlsidentitystore.h: At global scope:
+fakedtlsidentitystore.h:118:19: warning: override controls (override/final) only available with -std=c++11 or -std=gnu++11 [enabled by default]
+           observer) override {
+                   ^
+fakedtlsidentitystore.h:181:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int key_index_ = 0;
+                    ^
+fakedtlsidentitystore.h: In static member function ‘static rtc::scoped_refptr<rtc::RTCCertificate> FakeDtlsIdentityStore::GenerateCertificate()’:
+fakedtlsidentitystore.h:145:40: error: ‘move’ is not a member of ‘std’
+     return rtc::RTCCertificate::Create(std::move(identity));
+                                        ^
+main.cc: At global scope:
+main.cc:38:12: error: expected initializer before ‘wWinMain’
+ int PASCAL wWinMain(HINSTANCE instance, HINSTANCE prev_instance,
+            ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h: In instantiation of ‘static void cricket::AudioOptions::SetFrom(rtc::Optional<T>*, const rtc::Optional<T>&) [with T = bool]’:
+mediachannel.h:103:57:   required from here
+mediachannel.h:231:10: error: ambiguous overload for ‘operator=’ (operand types are ‘rtc::Optional<bool>’ and ‘const rtc::Optional<bool>’)
+       *s = o;
+          ^
+mediachannel.h:231:10: note: candidates are:
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:79:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(const rtc::Optional<T>&) [with T = bool]
+   Optional& operator=(const Optional&) = default;
+             ^
+optional.h:80:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(rtc::Optional<T>) [with T = bool; rtc::Optional<T> = rtc::Optional<bool>]
+   Optional& operator=(Optional&& m) {
+             ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h: In instantiation of ‘static void cricket::AudioOptions::SetFrom(rtc::Optional<T>*, const rtc::Optional<T>&) [with T = int]’:
+mediachannel.h:109:51:   required from here
+mediachannel.h:231:10: error: ambiguous overload for ‘operator=’ (operand types are ‘rtc::Optional<int>’ and ‘const rtc::Optional<int>’)
+       *s = o;
+          ^
+mediachannel.h:231:10: note: candidates are:
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:79:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(const rtc::Optional<T>&) [with T = int]
+   Optional& operator=(const Optional&) = default;
+             ^
+optional.h:80:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(rtc::Optional<T>) [with T = int; rtc::Optional<T> = rtc::Optional<int>]
+   Optional& operator=(Optional&& m) {
+             ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h: In instantiation of ‘static void cricket::AudioOptions::SetFrom(rtc::Optional<T>*, const rtc::Optional<T>&) [with T = short unsigned int]’:
+mediachannel.h:121:59:   required from here
+mediachannel.h:231:10: error: ambiguous overload for ‘operator=’ (operand types are ‘rtc::Optional<short unsigned int>’ and ‘const rtc::Optional<short unsigned int>’)
+       *s = o;
+          ^
+mediachannel.h:231:10: note: candidates are:
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:79:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(const rtc::Optional<T>&) [with T = short unsigned int]
+   Optional& operator=(const Optional&) = default;
+             ^
+optional.h:80:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(rtc::Optional<T>) [with T = short unsigned int; rtc::Optional<T> = rtc::Optional<short unsigned int>]
+   Optional& operator=(Optional&& m) {
+             ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h: In instantiation of ‘static void cricket::AudioOptions::SetFrom(rtc::Optional<T>*, const rtc::Optional<T>&) [with T = unsigned int]’:
+mediachannel.h:125:65:   required from here
+mediachannel.h:231:10: error: ambiguous overload for ‘operator=’ (operand types are ‘rtc::Optional<unsigned int>’ and ‘const rtc::Optional<unsigned int>’)
+       *s = o;
+          ^
+mediachannel.h:231:10: note: candidates are:
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:79:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(const rtc::Optional<T>&) [with T = unsigned int]
+   Optional& operator=(const Optional&) = default;
+             ^
+optional.h:80:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(rtc::Optional<T>) [with T = unsigned int; rtc::Optional<T> = rtc::Optional<unsigned int>]
+   Optional& operator=(Optional&& m) {
+             ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h: In instantiation of ‘static void cricket::VideoOptions::SetFrom(rtc::Optional<T>*, const rtc::Optional<T>&) [with T = bool]’:
+mediachannel.h:248:71:   required from here
+mediachannel.h:401:10: error: ambiguous overload for ‘operator=’ (operand types are ‘rtc::Optional<bool>’ and ‘const rtc::Optional<bool>’)
+       *s = o;
+          ^
+mediachannel.h:401:10: note: candidates are:
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:79:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(const rtc::Optional<T>&) [with T = bool]
+   Optional& operator=(const Optional&) = default;
+             ^
+optional.h:80:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(rtc::Optional<T>) [with T = bool; rtc::Optional<T> = rtc::Optional<bool>]
+   Optional& operator=(Optional&& m) {
+             ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h: In instantiation of ‘static void cricket::VideoOptions::SetFrom(rtc::Optional<T>*, const rtc::Optional<T>&) [with T = int]’:
+mediachannel.h:252:61:   required from here
+mediachannel.h:401:10: error: ambiguous overload for ‘operator=’ (operand types are ‘rtc::Optional<int>’ and ‘const rtc::Optional<int>’)
+       *s = o;
+          ^
+mediachannel.h:401:10: note: candidates are:
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:79:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(const rtc::Optional<T>&) [with T = int]
+   Optional& operator=(const Optional&) = default;
+             ^
+optional.h:80:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(rtc::Optional<T>) [with T = int; rtc::Optional<T> = rtc::Optional<int>]
+   Optional& operator=(Optional&& m) {
+             ^
+In file included from main_wnd.h:38:0,
+                 from conductor.h:37,
+                 from main.cc:29:
+mediachannel.h: In instantiation of ‘static void cricket::VideoOptions::SetFrom(rtc::Optional<T>*, const rtc::Optional<T>&) [with T = float]’:
+mediachannel.h:263:49:   required from here
+mediachannel.h:401:10: error: ambiguous overload for ‘operator=’ (operand types are ‘rtc::Optional<float>’ and ‘const rtc::Optional<float>’)
+       *s = o;
+          ^
+mediachannel.h:401:10: note: candidates are:
+In file included from mediachannel.h:41:0,
+                 from main_wnd.h:38,
+                 from conductor.h:37,
+                 from main.cc:29:
+optional.h:79:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(const rtc::Optional<T>&) [with T = float]
+   Optional& operator=(const Optional&) = default;
+             ^
+optional.h:80:13: note: rtc::Optional<T>& rtc::Optional<T>::operator=(rtc::Optional<T>) [with T = float; rtc::Optional<T> = rtc::Optional<float>]
+   Optional& operator=(Optional&& m) {
+             ^
